@@ -29,7 +29,7 @@ def main():
     test_emails = [
         "jai.kumar#kalvium.community"]  
     for email in test_emails:
-        if is_valid_email(email):
+        if is_valid_email(email): 
             print(f"{email} is a valid email address.")
         else:
             print(f"{email} is not a valid email address.") 
