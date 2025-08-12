@@ -1,0 +1,56 @@
+/* Add a hover effect to menu items */
+.menu-item:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+/* Create a responsive grid layout for menu items */
+.menu {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+  padding: 24px;
+}
+
+/* Add fade-in animation for section headers */
+h2 {
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+header {
+    background: linear-gradient(90deg, #ff7eb3 0%, #65c7f7 100%);
+    color: #fff;
+    text-align: center;
+    padding: 40px 0 20px 0;
+    border-radius: 0 0 24px;
+}
+
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  border: 2px solid #ff7eb3;
+  border-radius: 12px;
+  padding: 24px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(101, 199, 255, 0.2);
+}
+
+body {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+}
