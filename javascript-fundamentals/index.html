@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>JavaScript Fundamentals Review</title>
+</head>
+<body>
+  <script>
+    // Write your Copilot prompt comments and generated JS code here
+    /* Declare variables of different types: string, number, boolean.*/
+    const name = "John Doe"; // string
+    const age = 30; // number
+    const isStudent = true; // boolean
+    /* write code such that we print all the variables using console.log */
+    console.log(name);
+    console.log(age);
+    console.log(isStudent);
+
+
+    /* Write a function to add two numbers and return the result, write it in such a way that user inputs two numbers, print the sum on html page with big font and center aligned */
+    function addNumbers() {
+      const a = parseFloat(prompt("Enter the first number:"));
+      const b = parseFloat(prompt("Enter the second number:"));
+      const sum = a + b;
+      document.write("<h1 style='text-align: center;'>" + sum + "</h1>");
+    }
+
+    addNumbers();
+
+
+    /* create a for loop to print numbers from 1 to 10 and display them on the html page with space seperated values make the font big and red color */
+    for (let i = 1; i <= 10; i++) {
+      document.write("<span style='font-size: 24px; color: red;'>" + i + "</span> ");
+    }
+
+
+
+    /* create a while loop to print from 50 to 25 and display them on html page center with font color in blue, change the position to bottom center */
+    let i = 50;
+    while (i >= 25) {
+      document.write("<span style='font-size: 24px; color: blue; display: block; text-align: center;'>" + i + "</span> ");
+      i--;
+    }
+
+
+    /* write a function to take input string from user and reverse it, display the reversed string on html with big green font with border 2px */
+    function reverseString() {
+      const str = prompt("Enter a string to reverse:");
+      const reversed = str.split("").reverse().join("");
+      document.write("<h1 style='font-size: 24px; color: green; border: 2px solid black; text-align:center;'>" + reversed + "</h1>");
+    }
+
+    reverseString();
+
+
+
+    /* write a recursive function to calcuate a factorial of a number, take the input from user and display the result with big black font */
+
+    function factorial(n) {
+      if (n === 0) {
+        return 1;
+      } else {
+        return n * factorial(n - 1);
+      }
+    }
+
+    const num = parseInt(prompt("Enter a number to calculate its factorial:"));
+    const result = factorial(num);
+    document.write("<h1 style='font-size: 24px; color: black;'>" + result + "</h1>");
+
+
+    /* Create an array of objects and write a function to filter items by a property. */
+    const items = [
+      { name: "Item 1", category: "A" },
+      { name: "Item 2", category: "B" },
+      { name: "Item 3", category: "A" },
+      { name: "Item 4", category: "C" }
+    ];
+
+    function filterItemsByCategory(category) {
+      return items.filter(item => item.category === category);
+    }
+
+    const filteredItems = filterItemsByCategory("A");
+    document.write("<h1>Filtered Items:</h1>");
+    filteredItems.forEach(item => {
+      document.write("<p>" + item.name + "</p>");
+    });
+
+  </script>
+</body>
+</html>
